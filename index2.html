@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- REACT LIBRARY -->
+<script src="https://unpkg.com/react@15.5.4/dist/react.js"></script>
+    <!-- REACT DOM LIBRARY -->
+<script src="https://unpkg.com/react-dom@15.5.4/dist/react-dom.js"></script>
+    <!-- BABEL LIBRARY -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+    <!-- FONT AWESOME -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Friendly</title>
+</head>
+<body>
+    <div id="app">React has not render yet</div>
+<script type="text/babel">
+
+//Friendly Component
+var Friendly =  function(props) {
+    var friendlStyle = {
+        display: "inline-block",
+        margin: 20,
+        height: 300,
+        width: 200,
+        backgroundColor: "#FFF",
+        WebkitFilter: "drop-shadow(0px 0px 5px #555)",
+        filter: "drop-shadow(0px 0px 5px #555)"
+    }
+    return(
+        <div style={friendlStyle}>
+        <Avatar img={props.img}/>
+        <Username name={props.name}/>
+        <GetConnected/>
+        </div>
+    );
+}
+
+//Avatar Component
+var Avatar =  function(props) {
+    var avatarStyle = {
+        marginLeft: 27,
+        marginTop: 20,
+        width: 150,
+        height: 150,
+        borderRadius: "50%"
+    }
+    return(
+        <img src={props.img} style={avatarStyle}/>
+    );
+}
+
+//Username Component
+var Username =  function(props) {
+    var nameStyle = {
+        fontSize: 24,
+        textAlign: "center",
+        fontFamily: "Arial, Helvetica, sans-serif",
+        margin: 20
+    }
+    return(
+        <h1 style={nameStyle} >{props.name}</h1>
+    );
+}
+
+//GetConnected Component
+var GetConnected = function() {
+    var getConnectedStyle = {
+        marginLeft: 15,
+    }
+    return(
+        <div style={getConnectedStyle}>
+            <Like/>
+            <Share/>
+            <Add/>
+        </div>
+    );
+}
+
+var iconStyle = {
+    margin: 20
+}
+
+    //Like Component
+    var Like = function() {
+        return(
+            <i className="fa fa-thumbs-o-up" aria-hidden="true" style={iconStyle}></i>
+        );
+    }
+
+    //Share Component
+    var Share = function() {
+        return(
+            <i className="fa fa-share" aria-hidden="true" style={iconStyle}></i>
+        );
+    }
+
+    //Add Component
+    var Add =  function() {
+        return(
+            <i className="fa fa-plus" aria-hidden="true" style={iconStyle}></i>
+        );
+    }
+
+ReactDOM.render(
+    <div>
+    <Friendly 
+    name="Tiago Pereira" 
+    img="https://instagram.flis1-1.fna.fbcdn.net/t51.2885-19/10729204_1475193749414684_1557209999_a.jpg"
+    />
+    <Friendly 
+    name="Antonio José" 
+    img="https://instagram.flis1-1.fna.fbcdn.net/t51.2885-19/10729204_1475193749414684_1557209999_a.jpg"
+    />
+    <Friendly 
+    name="Maria Antónia" 
+    img="https://instagram.flis1-1.fna.fbcdn.net/t51.2885-19/10729204_1475193749414684_1557209999_a.jpg"
+    />
+    <Friendly 
+    name="João Rodrigues" 
+    img="https://instagram.flis1-1.fna.fbcdn.net/t51.2885-19/10729204_1475193749414684_1557209999_a.jpg"
+    />
+    <Friendly 
+    name="Mahir" 
+    img="https://instagram.flis1-1.fna.fbcdn.net/t51.2885-19/10729204_1475193749414684_1557209999_a.jpg"
+    />
+    <Friendly 
+    name="Eric" 
+    img="https://instagram.flis1-1.fna.fbcdn.net/t51.2885-19/10729204_1475193749414684_1557209999_a.jpg"
+    />
+    <Friendly 
+    name="Stephen" 
+    img="https://instagram.flis1-1.fna.fbcdn.net/t51.2885-19/10729204_1475193749414684_1557209999_a.jpg"
+    />
+    <Friendly 
+    name="Joey" 
+    img="https://instagram.flis1-1.fna.fbcdn.net/t51.2885-19/10729204_1475193749414684_1557209999_a.jpg"
+    />
+    <Friendly 
+    name="Joey" 
+    img="https://instagram.flis1-1.fna.fbcdn.net/t51.2885-19/10729204_1475193749414684_1557209999_a.jpg"
+    />
+    <Friendly 
+    name="Joey" 
+    img="https://instagram.flis1-1.fna.fbcdn.net/t51.2885-19/10729204_1475193749414684_1557209999_a.jpg"
+    />
+    </div>,
+    document.getElementById('app')
+);
+
+</script>   
+</body>
+</html>
